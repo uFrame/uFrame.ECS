@@ -139,7 +139,7 @@ namespace uFrame.ECS.Editor
         public TreeViewModel TreeModel { get; set; }
         public void DrawInspector(Object target)
         {
-            GUIHelpers.IsInsepctor = true;
+            GUIHelpers.IsInspector = true;
             var entityComponent = target as Entity;
             if (entityComponent != null)
             {

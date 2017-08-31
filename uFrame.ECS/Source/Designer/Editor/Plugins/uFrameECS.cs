@@ -139,9 +139,12 @@ namespace uFrame.ECS.Editor
 
         static uFrameECS()
         {
-            InvertApplication.CachedAssembly(typeof(Button).Assembly);
-            InvertApplication.CachedTypeAssembly(typeof(uFrameECS).Assembly);
-            InvertApplication.TypeAssemblies.AddRange(AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.StartsWith("Assembly")));
+            InvertApplication.CacheAssembly(typeof(Button).Assembly);
+            InvertApplication.CacheTypeAssembly(typeof(uFrameECS).Assembly);
+            // FIXME: Unity 2017.2 allows custom assembly definitions
+            foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.StartsWith("Assembly"))) {
+                InvertApplication.CacheTypeAssembly(assembly);
+            }
         }
 
         public override void Initialize(UFrameContainer container)

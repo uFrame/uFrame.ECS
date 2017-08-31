@@ -50,7 +50,7 @@ namespace uFrame.ECS.Editor.Utilities
                     Command = new AddComponentToSelectionCommand()
                     {
                         ComponentName = component.Name,
-                        ComponentType = InvertApplication.FindRuntimeType(component.FullName)
+                        ComponentType = InvertApplication.FindTypeByName(component.FullName)
                     }
                 });
             }

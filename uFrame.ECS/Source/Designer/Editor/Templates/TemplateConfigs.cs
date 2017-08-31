@@ -31,9 +31,9 @@ namespace uFrame.ECS.Templates
     {
         static EcsTemplates()
         {
-            InvertApplication.CachedAssembly(typeof(EcsTemplates).Assembly);
-            InvertApplication.CachedAssembly(typeof(UFAction).Assembly);
-            InvertApplication.CachedTypeAssembly(typeof(UFAction).Assembly);
+            InvertApplication.CacheAssembly(typeof(EcsTemplates).Assembly);
+            InvertApplication.CacheAssembly(typeof(UFAction).Assembly);
+            InvertApplication.CacheTypeAssembly(typeof(UFAction).Assembly);
         }
         public override void Initialize(UFrameContainer container)
         {
