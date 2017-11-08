@@ -61,7 +61,7 @@ namespace uFrame.ECS.Templates
 
     public class _ITEM_TYPE_AS_INTERFACE: _ITEMTYPE_
     {
-        public override string TheType(TemplateContext context)
+        public string TheType(TemplateContext context)
         {
             var item = context.Item as IMappingsConnectable;
             if (item != null)

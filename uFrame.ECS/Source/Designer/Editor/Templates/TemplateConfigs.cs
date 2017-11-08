@@ -1311,7 +1311,7 @@ namespace uFrame.ECS.Templates
 
     public class _CONTEXTITEM_ : _ITEMTYPE_
     {
-        public override string TheType(TemplateContext context)
+        public string TheType(TemplateContext context)
         {
             return base.TheType(context);
         }
@@ -1319,7 +1319,7 @@ namespace uFrame.ECS.Templates
 
     public class _CONTEXT_ : _ITEMTYPE_
     {
-        public override string TheType(TemplateContext context)
+        public string TheType(TemplateContext context)
         {
             return base.TheType(context) + "Context";
         }
